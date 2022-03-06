@@ -1,0 +1,41 @@
+body {
+	background-color: #D8FFFF;
+}
+
+#menu {
+	color: #df7fb6;
+	background-color: #80004c;
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+	padding: 5px;
+	font-family: georgia, garamond, "Times New Roman";
+	font-size: 1.2em;
+}
+
+td:hover {
+	color: white;
+}
+
+
+a:link {
+	color: #df7fb6;
+	text-decoration: none;
+}
+ 
+a:visited {
+	color: #df7fb6;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+}
+
+#pink {
+	color: #eaadd0;
+}
+
+#pink:hover {
+	color: white;
+}
