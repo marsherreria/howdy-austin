@@ -39,3 +39,10 @@ a:hover {
 #pink:hover {
 	color: white;
 }
+
+.navbar {
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;  
+    border-top-right-radius:30px;
+    border-bottom-right-radius:30px;  
+}
