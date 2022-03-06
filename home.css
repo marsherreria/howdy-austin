@@ -11,6 +11,8 @@ body {
 	padding: 5px;
 	font-family: georgia, garamond, "Times New Roman";
 	font-size: 1.2em;
+	margin-left: auto;
+  	margin-right: auto;
 }
 
 td:hover {
