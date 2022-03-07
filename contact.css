@@ -1,0 +1,32 @@
+body {
+	background-color: #D8FFFF;
+}
+
+h1 {
+	font-family: georgia, garamond, "Times New Roman";
+	color: #80004c;
+	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+}
+
+#contact-form {
+	color: #80004c;
+	background-color: #df7fb6;
+	table-layout: fixed;
+	font-family: georgia, garamond, "Times New Roman";
+	font-size: 1.2em;
+	padding: 1em;
+	border-radius: 25px;
+	border: 5px #80004c;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+img {
+	display: block;
+	align-self: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: .5em;
+}
