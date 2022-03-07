@@ -30,3 +30,58 @@ img {
 	margin-right: auto;
 	padding-bottom: .5em;
 }
+
+#menu {
+	color: #df7fb6;
+	background-color: #80004c;
+	table-layout: fixed;
+	width: 90%;
+	text-align: center;
+	padding: 5px;
+	font-family: georgia, garamond, "Times New Roman";
+	font-size: 1.2em;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.navbar {
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;  
+    border-top-right-radius:30px;
+    border-bottom-right-radius:30px;  
+}
+
+#pink {
+	color: #eaadd0;
+}
+
+#selectednav {
+	color: #ffffff;
+	font-weight: bolder;
+}
+
+a:link {
+	color: #df7fb6;
+	text-decoration: none;
+}
+ 
+a:visited {
+	color: #df7fb6;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+}
+
+#offpink{
+	color: #df7fb6;
+}
+
+#offpink:hover{
+	color: white;
+}
+
+#pink:hover {
+	color: white;
+}
