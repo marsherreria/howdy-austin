@@ -1,5 +1,5 @@
 body {
-	background-color: #D8FFFF;
+	background-color: #d6e7ef;
 }
 
 h1 {
@@ -84,4 +84,14 @@ a:hover {
 
 #pink:hover {
 	color: white;
+}
+
+.bottom-info {
+	font-family: 'Inter', sans-serif;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	padding-left: 10px;
+	color: white;
+	position:fixed;
+   	bottom:0px;
 }
