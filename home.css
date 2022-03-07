@@ -38,6 +38,11 @@ a:hover {
 	color: #eaadd0;
 }
 
+#selectednav {
+	color: #ffffff;
+	font-weight: bolder;
+}
+
 #pink:hover {
 	color: white;
 }
