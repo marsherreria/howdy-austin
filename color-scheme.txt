@@ -1,0 +1,9 @@
+Standardizing color scheme
+---------------------------
+
+background light blue: #D8FFFF
+nav bar background dark pink: #80004c
+nav bar font lighter: #eaadd0
+nav bar font darker: #df7fb6
+nav bar current/ hovered over: white
+navy font color: #004280

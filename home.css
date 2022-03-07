@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Playfair+Display&display=swap');
+
 body {
-	background-color: #D8FFFF;
+	background-color: #d6e7ef;
 }
 
 #menu {
@@ -76,3 +79,30 @@ article{
 	margin-left: 20%;
 	margin-right: 15%;
 } 
+
+.home-quote {
+	color: #004280;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Inter', sans-serif;
+	font-family: 'Playfair Display', serif;
+}
+
+.bottom-info {
+	font-family: 'Inter', sans-serif;
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	padding-left: 10px;
+	color: white;
+}
+
+#left-disco {
+	float: left;
+	height: 400px;
+
+}
+
+#right-disco {
+	float: right;
+	height: 400px;
+}
