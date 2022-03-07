@@ -61,3 +61,18 @@ img {
 	margin-right: auto;
 	padding-bottom: .5em;
 }
+
+h2 {
+	font-family: georgia, garamond, "Times New Roman";
+	color: #80004c;
+	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+}
+
+article{
+	font-family: georgia, garamond, "Times New Roman";
+	color: #004280;
+	margin-left: 20%;
+	margin-right: 15%;
+} 
