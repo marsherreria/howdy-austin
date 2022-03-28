@@ -188,3 +188,33 @@ article{
 	height: 50px;
 	float: right;
 }
+
+
+.pics {
+	width: 33%;
+	float: left;
+	margin-left: 100px;
+	margin-right: 50px;
+	background-color: white;
+	padding: 20px;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.blurb {
+	padding: 0px 20px 0x 20px;
+	width: 90%;
+}
+
+.name {
+	text-align:left;
+	font-size:1.7em;
+	margin-top:0px;
+}
+
+
+
+.text {
+	color: #003d7a;
+	font-size: 1.3em;
+	text-align: justify;
+}
