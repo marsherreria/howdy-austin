@@ -218,3 +218,11 @@ article{
 	font-size: 1.3em;
 	text-align: justify;
 }
+
+.subtitle {
+	text-align: center;
+	font-size: 3.4em;
+	color: #df7fb6;
+	text-decoration: underline;
+
+}
