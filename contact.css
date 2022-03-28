@@ -31,38 +31,107 @@ img {
 	padding-bottom: .5em;
 }
 
-#menu {
-	color: #df7fb6;
+
+button {
 	background-color: #80004c;
-	table-layout: fixed;
-	width: 90%;
-	text-align: center;
-	padding: 5px;
-	font-family: georgia, garamond, "Times New Roman";
+  	border: none;
+  	outline: none;
 	font-size: 1.2em;
-	margin-left: auto;
-  	margin-right: auto;
+	font-family: georgia, garamond, "Times New Roman";
 }
 
 .navbar {
-    border-top-left-radius:30px;
-    border-bottom-left-radius:30px;  
-    border-top-right-radius:30px;
-    border-bottom-right-radius:30px;  
+	width: 90%;
+	background-color: #80004c;
+	overflow: hidden;
+	margin-left: auto;
+  	margin-right: auto;
+
+    	border-top-left-radius:30px;
+    	border-bottom-left-radius:30px;  
+    	border-top-right-radius:30px;
+    	border-bottom-right-radius:30px;  
 }
 
-#pink {
-	color: #eaadd0;
+.navbar a button {
+	float: left;
+	color: #df7fb6;
+	font-family: georgia, garamond, "Times New Roman";
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+}
+	
+
+.top {
+	position: fixed;
+	top: 0;
+	background-color: #D8FFFF;
+	width: 100%;
 }
 
-#selectednav {
-	color: #ffffff;
-	font-weight: bolder;
+
+
+.dropbtn {
+	padding: 5px;
 }
+
+.dropdown {
+  	float: left;
+  	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	background-color: #80004c;
+  	border: none;
+  	outline: none;
+  	background-color: inherit;
+  	font-family: inherit;
+  	margin: 0; 
+}
+
+.dropdown-content {
+  	display: none;
+  	position: absolute;
+  	background-color: #f9f9f9;
+	min-width: 160px;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    	border-top-left-radius:5px;
+    	border-bottom-left-radius:5px;  
+    	border-top-right-radius:5px;
+    	border-bottom-right-radius:5px;  
+  	z-index: 1;
+}
+
+.dropdown-content a:hover {
+  	background-color: #ddd;
+    	border-top-left-radius:5px;
+    	border-bottom-left-radius:5px;  
+    	border-top-right-radius:5px;
+    	border-bottom-right-radius:5px; 	
+}
+
+.dropdown:hover .dropdown-content {
+  	display: block;
+}
+
+.dropdown-content a {
+  	float: none;
+  	color: black;
+	padding: 10px 15px 10px 15px;
+  	text-decoration: none;
+  	display: block;
+  	text-align: left;
+}
+
+td:hover {
+	color: white;
+}
+
 
 a:link {
 	color: #df7fb6;
 	text-decoration: none;
+	font-size: 1.1em;
 }
  
 a:visited {
@@ -74,15 +143,24 @@ a:hover {
 	color: white;
 }
 
+#pink {
+	color: #eaadd0;
+}
+
+#selectednav {
+	color: #ffffff;
+	font-weight: bolder;
+}
+
+#pink:hover {
+	color: white;
+}
+
 #offpink{
 	color: #df7fb6;
 }
 
 #offpink:hover{
-	color: white;
-}
-
-#pink:hover {
 	color: white;
 }
 
