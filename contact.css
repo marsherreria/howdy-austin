@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Playfair+Display&display=swap');
+
+
 body {
 	background-color: #d6e7ef;
 }
@@ -123,10 +127,6 @@ button {
   	text-align: left;
 }
 
-td:hover {
-	color: white;
-}
-
 
 a:link {
 	color: #df7fb6;
@@ -153,14 +153,6 @@ a:hover {
 }
 
 #pink:hover {
-	color: white;
-}
-
-#offpink{
-	color: #df7fb6;
-}
-
-#offpink:hover{
 	color: white;
 }
 
