@@ -15,6 +15,30 @@ button {
 	font-family: georgia, garamond, "Times New Roman";
 }
 
+#contact-form {
+	color: #80004c;
+	background-color: #df7fb6;
+	table-layout: fixed;
+	font-family: georgia, garamond, "Times New Roman";
+	font-size: 1.2em;
+	padding: 1em;
+	border-radius: 25px;
+	border: 5px #80004c;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+#instructions {
+	padding-left: 300px;
+	padding-right: 300px;
+	color: #004280;
+	text-align: center;
+	font-size: 15px;
+	font-family: 'Inter', sans-serif;
+	font-family: 'Playfair Display', serif;
+
+}
+
 .navbar {
 	width: 90%;
 	background-color: #80004c;
