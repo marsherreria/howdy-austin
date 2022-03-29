@@ -4,9 +4,9 @@ var curr_index = 0;
 var slideShow = ["photos/velvetTaco.jpg",
                 "photos/chuys.jpg",
                 "photos/rositas.jpg",
-                "photos/crux.jpeg",
-                "photos/greenbelt.jpeg",
-                "photos/ABP.jpeg"]
+                "photos/cruxclimbing.jpg",
+                "photos/greenbelt.jpg",
+                "photos/acl.jpg"]
 
 
 function next_image() {
