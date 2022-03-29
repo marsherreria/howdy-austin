@@ -22,11 +22,11 @@ function getInfo() {
 	repeatPassword = document.getElementById("repeat").value;
 }
 
-// username must be 6-10 digits
+// username must be 6-20 digits
 // username can only have letters & digits
 // user cannot begin with a digit
 // password and repeat password must match
-// password must be 6-10 digits
+// password must be 8-20 digits
 // password must only have letters & digits
 // password must have one lowercase, one uppercase and one digit
 
