@@ -122,11 +122,6 @@ button {
   	text-align: left;
 }
 
-td:hover {
-	color: white;
-}
-
-
 a:link {
 	color: #df7fb6;
 	text-decoration: none;
