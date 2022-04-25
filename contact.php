@@ -29,69 +29,71 @@ print <<<THANK_YOU
 
 <body>
         <div class="navbar">
-                        <button style="margin-left: 29px; float: left" class="dropbtn"><a  id = "selectednav" href="home.html">HOME</a></button>
+			<button style="margin-left: 29px; float: left" class="dropbtn"><a href="home.html">HOME</a></button>
+			
+			<div class="dropdown">
+				<button style="margin-left: 29px;" class="dropbtn"><a id="pink" href= "foodanddrink.php">FOOD & DRINK</a></button>
+			
+				<div class="dropdown-content">
+					<a href="foodanddrink.php">Restaurants</a>
+     			 		<a href="foodanddrink.php#coffeeshops">Coffee Shops</a>
+      					<a href="foodanddrink.php#bobatea">Boba Tea</a>
+				</div>
+			</div>
 
-                        <div class="dropdown">
-                                <button style="margin-left: 29px;" class="dropbtn"><a id="pink" href= "foodanddrink.html">FOOD & DRINK</a></button>
+			<div class="dropdown">
+				<button style="margin-left: 29px;" class="dropbtn"><a href="outdoors.php">OUTDOORS</a></button>
+			
+				<div class="dropdown-content">
+					<a href="outdoors.php">Hiking</a>
+     			 		<a href="outdoors.php#swimming">Swimming</a>
+					<a href="outdoors.php#kayaking">Kayaking</a>
+      					<a href="outdoors.php#rockclimbing">Rock Climbing</a>
+				</div>
+			</div>
 
-                                <div class="dropdown-content">
-                                        <a href="foodanddrink.html">Restaurants</a>
-                                        <a href="foodanddrink.html#coffeeshops">Coffee Shops</a>
-                                <a href="foodanddrink.html#bobatea">Boba Tea</a>
-                                </div>
-                        </div>
+			<div class="dropdown">
+				<button style="margin-left: 29px;" class="dropbtn"><a id="pink" href = "nightout.php">NIGHT OUT</a></button>
+			
+				<div class="dropdown-content">
+					<a href="nightout.php">Bars</a>
+     			 		<a href="nightout.php#clubs">Clubs</a>
+				</div>
+			</div>
 
-                        <div class="dropdown">
-                                <button style="margin-left: 29px;" class="dropbtn"><a href="outdoors.html">OUTDOORS</a></button>
+			<div class="dropdown">
+				<button style="margin-left: 29px;" class="dropbtn"><a href = "campus.php">CAMPUS</a></button>
+			
+				<div class="dropdown-content">
+					<a href="campus.php">Study Places</a>
+				</div>
+			</div>
 
-                                <div class="dropdown-content">
-                                        <a href="outdoors.html">Hiking</a>
-                                        <a href="outdoors.html#swimming">Swimming</a>
-                                        <a href="outdoors.html#kayaking">Kayaking</a>
-                                <a href="outdoors.html#rockclimbing">Rock Climbing</a>
-                                </div>
-                        </div>
+			<div class="dropdown">
+				<button style="margin-left: 29px;" class="dropbtn"><a id="pink" href ="shopping.php">SHOPPING</a></button>
+			
+				<div class="dropdown-content">
+     			 		<a href="shopping.php">Thrift Stores</a>
+				</div>
+			</div>
 
-                        <div class="dropdown">
-                                <button style="margin-left: 29px;" class="dropbtn"><a id="pink" href = "nightout.html">NIGHT OUT</a></button>
+			<div class="dropdown">
+				<button style="margin-left: 29px;" class="dropbtn"><a href= "events.php">EVENTS</a></button>
+			
+				<div class="dropdown-content">
+					<a href="events.php">Music</a>
+     			 		<a href="events.php#sports">Sports</a>
+				</div>
+			</div>
 
-                                <div class="dropdown-content">
-                                        <a href="nightout.html">Bars</a>
-                                        <a href="nightout.html#clubs">Clubs</a>
-                                </div>
-                        </div>
+			<button style="margin-left: 29px;" class="dropbtn""><a id="selectednav" href="contact.html">CONTACT US</a></button>
 
-                        <div class="dropdown">
-                                <button style="margin-left: 29px;" class="dropbtn"><a href = "campus.html">CAMPUS</a></button>
-
-                                <div class="dropdown-content">
-                                        <a href="campus.html">Study Places</a>
-                                </div>
-                        </div>
-
-                        <div class="dropdown">
-                                <button style="margin-left: 29px;" class="dropbtn"><a id="pink" href ="shopping.html">SHOPPING</a></button>
-
-                                <div class="dropdown-content">
-                                        <a href="shopping.html">Thrift Stores</a>
-                                </div>
-                        </div>
-
-                        <div class="dropdown">
-                                <button style="margin-left: 29px;" class="dropbtn"><a href= "events.html">EVENTS</a></button>
-
-                                <div class="dropdown-content">
-                                        <a href="events.html">Music</a>
-                                        <a href="events.html#sports">Sports</a>
-                                </div>
-                        </div>
-
-                        <button style="margin-left: 29px;" class="dropbtn"><a id="pink" href="contact.html">CONTACT US</a></button>
-
-                        <button style="margin-left: 29px;" class="dropbtn"><a href= "aboutus.html">ABOUT US</a></button>
+			<button style="margin-left: 29px;" class="dropbtn"><a href= "aboutus.html">ABOUT US</a></button>
 
 
-                </div>
+		</div>
+
+	</div>
 
 
 <br>
