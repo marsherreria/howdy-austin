@@ -5,10 +5,11 @@
 <head>
    <title>Profile - Howdy, Austin</title>
    <meta charset="UTF-8">
-   <meta name="description" content="Profile">
+   <meta name="description" content="Shopping">
    <meta name="author" content="Hana Bredstein, Mariana Herreria, Kaitlyn Ream, Hayley Slotboom">
    <link href="home.css" rel="stylesheet">
    <link rel="ICON" href="DISCO.png">
+
 
 </head> 
 
@@ -92,24 +93,24 @@ Already have an account? Click <a href = "login.php"> here </a> to login
 </p>
 
 
-<form action = "./profile.php" method = "post">
+<form method = "post" onsubmit = "form(); return false">
 
 
    <table id="contact-form" frame="box">
 
       <tr >
          <td id="label">Username: </td>
-         <td><input id="username" name = "username" type = "text" placeholder="Enter username..." width="40" /></td>
+         <td><input id="username" name = "username" type = "text" placeholder="Enter username..." required width="40" required/></td>
       </tr>
 
       <tr >
          <td id="label">Password: </td>
-         <td><input id="password" name = "password" type = "password" placeholder="Enter password..." width="40"/></td>
+         <td><input id="password" name = "password" type = "password" placeholder="Enter password..." required width="40"/></td>
       </tr>
 
       <tr >
          <td id="label">Repeat password: </td>
-         <td><input id="repeat" name = "repeat" type = "password" placeholder="Repeat password..." width="40" /> </td>
+         <td><input id="repeat" name = "repeat" type = "password" placeholder="Repeat password..." required width="40"/> </td>
       </tr>
 
       <tr>
@@ -117,7 +118,7 @@ Already have an account? Click <a href = "login.php"> here </a> to login
       </tr>
 
       <tr>
-         <td style="text-align:right;"><input id="register" type="button" value="Register"/></td>
+         <td style="text-align:right;"><input id="register" type="submit" value="Register"/></td>
          <td><input id="clear" type="reset" value="Clear"/></td>
       </tr>
 
@@ -125,7 +126,37 @@ Already have an account? Click <a href = "login.php"> here </a> to login
 
 </form>
 
-<script src="profile.js"></script>
+<br>
+<p id='result'></p>
+
+	<script>
+	function form() {
+		var ajaxRequest;
+
+		ajaxRequest = new XMLHttpRequest();
+
+		ajaxRequest.onreadystatechange = function(){
+                	if(ajaxRequest.readyState == 4){
+				console.log(ajaxRequest.responseText);
+                     		var ajaxDisplay = document.getElementById('result');
+                     		ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                  	}
+               	}
+
+		var username = document.getElementById('username').value;
+               	var password = document.getElementById('password').value;
+               	var repeat = document.getElementById('repeat').value;
+
+
+                var queryString = "?username=" + username;
+            
+               	queryString +=  "&password=" + password + "&repeat=" + repeat;
+               
+               	ajaxRequest.open("GET", "profile.php" + queryString, true);
+               	ajaxRequest.send(null);
+	}
+	</script>
+
 
         <div class="bottom-info">
             <p id = "contact"></p>
