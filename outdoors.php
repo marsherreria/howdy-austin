@@ -68,12 +68,13 @@
    		<link rel="ICON" href="DISCO.png">
 
 		</head> 
+		<body>
 
 		<a href="home.html">
     		<img src="HOWDY-AUSTIN.png" width="475" height="100">
     		</a>
 
-		<body>
+		
 		<div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a  href="home.html">HOME</a></button>
 			
@@ -143,8 +144,9 @@
 
 
 		<p id="instructions">
-		<b><i><u>Login to access content</b></i></u>
+		<b><i><u>Login to access content</u></i></b>
 		<br>
+		Don't have an account? Click <a href = "profile.html"> here </a> to register
 		</p>
 
 
@@ -201,23 +203,11 @@ LOGIN;
 
 </head> 
 
-<a href="home.html">
-    <img src="HOWDY-AUSTIN.png" width="475" height="100">
-    </a>
-
 <body>
 <div class="top">
 	<a href="home.html">
    		<img src="HOWDY-AUSTIN.png" width="475" height="100">
    	</a>
-
-	<div id="placeholder-img">
-		<a href="profile.html">
-			<img id="placeholder-img" 
-				 alt="Profile" 
-				 src="photos/user-placeholder.png">
-	</div>
-
 
 	<div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a href="home.html">HOME</a></button>
@@ -296,12 +286,12 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">River Place Nature Trail</h2>
-	<p class="text">Countless wooden steps crisscross this park and lead to gorgeous views of the Central Texas Hill Country, especially at sunset. Tucked away in a residential neighborhood, it’s a quiet, hidden gem perfect for a weekend outing with friends.<p>
+	<p class="text">Countless wooden steps crisscross this park and lead to gorgeous views of the Central Texas Hill Country, especially at sunset. Tucked away in a residential neighborhood, it's a quiet, hidden gem perfect for a weekend outing with friends.<p>
 	<a href="https://www.google.com/maps/dir//River+Place+Nature+Trail,+Big+View+Drive,+Austin,+TX/@30.3569807,-97.8992376,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x865b3423a0841089:0xe82d0ff59d18e44a!2m2!1d-97.8641322!2d30.3569113!3e0" target="_blank" style="font-size:1.2em;">Directions</a>
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/mckinneyfalls.jpg" alt="McKinney Falls">
@@ -322,7 +312,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">The Flats (Greenbelt)</h2>
-	<p class="text">Locals enjoy going to The Flats on a warm day; the water spot is quite close to downtown, and it’s a pretty easy hike to no fancy hiking gear is necessary. The water is really refreshing on a hot day, and the train is gorgeous!<p>
+	<p class="text">Locals enjoy going to The Flats on a warm day; the water spot is quite close to downtown, and it's a pretty easy hike to no fancy hiking gear is necessary. The water is really refreshing on a hot day, and the train is gorgeous!<p>
 	<a href="https://www.google.com/maps/dir//The+Flats,+Austin,+TX/@30.2585104,-97.8195285,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x8644b52cdaa32071:0x5f0427108fe34c0c!2m2!1d-97.7844231!2d30.2584409!3e0" target="_blank" style="font-size:1.2em;">Directions</a>
 	</div>
 	</div>
@@ -335,7 +325,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Twin Falls and Sculpture Falls (Greenbelt)</h2>
-	<p class="text">For a relatively easy 3-mile loop, try out Twin Falls! It usually takes just over an hour to complete, and it’s beautiful to visit any time of the year. Dogs are welcome, so this is a really popular area for trail dog-walking.<p>
+	<p class="text">For a relatively easy 3-mile loop, try out Twin Falls! It usually takes just over an hour to complete, and it's beautiful to visit any time of the year. Dogs are welcome, so this is a really popular area for trail dog-walking.<p>
 	<a href="https://www.google.com/maps/dir//Sculpture+Falls,+Barton+Creek+Greenbelt+Trail,+Austin,+TX/@30.2619197,-97.8586307,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x865b4a6086909eeb:0x1b165cc8ddb7d45c!2m2!1d-97.8235253!2d30.2618502!3e0" target="_blank" style="font-size:1.2em;">Directions</a>
 	</div>
 	</div>
@@ -348,7 +338,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Bastrop State Park</h2>
-	<p class="text">Home to one of the ancient pine forests of East Texas, this park is a great place to hike and camp. Unfortunately, many trees burned down over a decade ago and replanting efforts are ongoing. Seeing nature reclaim this land makes hiking here extra special, and don’t worry, there is still more than enough shade.<p>
+	<p class="text">Home to one of the ancient pine forests of East Texas, this park is a great place to hike and camp. Unfortunately, many trees burned down over a decade ago and replanting efforts are ongoing. Seeing nature reclaim this land makes hiking here extra special, and don't worry, there is still more than enough shade.<p>
 	<a href="https://www.google.com/maps/dir//Bastrop+State+Park,+Park+Road+1A,+Bastrop,+TX/@30.1102776,-97.3220292,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x86448534f962ddf9:0x718b461274315782!2m2!1d-97.2869238!2d30.110208!3e0" target="_blank" style="font-size:1.2em;">Directions</a>
 	</div>
 	</div>
@@ -361,7 +351,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Lake Georgetown</h2>
-	<p class="text">The trail around lake Georgetown continues for over 26 miles and is perfect for hiking, trail running, or mountain biking. While I wouldn’t recommend attempting the entire loop, there are plenty of trail access points and a few campsites for short day trips or weekend wilderness forays.<p>
+	<p class="text">The trail around lake Georgetown continues for over 26 miles and is perfect for hiking, trail running, or mountain biking. While I wouldn't recommend attempting the entire loop, there are plenty of trail access points and a few campsites for short day trips or weekend wilderness forays.<p>
 	<a href="https://www.google.com/maps/dir//Lake+Georgetown,+Georgetown,+TX/@30.4579217,-98.0317795,10z/data=!4m9!4m8!1m0!1m5!1m1!1s0x86452a7c71d26489:0x32f09c7a7689ab19!2m2!1d-97.7355595!2d30.6776793!3e0" target="_blank" style="font-size:1.2em;">Directions</a>
 	</div>
 	</div>
@@ -389,7 +379,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Blue Hole</h2>
-	<p class="text">If you’re up for a quick road trip, drive 45 minutes south of Austin for a refreshing dip in the gorgeous, crystal-clear waters of Blue Hole. The temperatures typically stay around 75 degrees year-round and are towered by enormous cypress trees. There’s even rope swings to complete anyone’s ideal watering hole experience!<p>
+	<p class="text">If you're up for a quick road trip, drive 45 minutes south of Austin for a refreshing dip in the gorgeous, crystal-clear waters of Blue Hole. The temperatures typically stay around 75 degrees year-round and are towered by enormous cypress trees. There's even rope swings to complete anyone's ideal watering hole experience!<p>
 	<a href="https://www.google.com/maps/dir//Blue+Hole+Park,+Blue+Hole+Park,+Georgetown,+TX/@30.6429705,-97.7149922,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x8644d66ba88361eb:0xcd150b1d48574085!2m2!1d-97.6798868!2d30.6429014!3e0" target="_blank" style="font-size:1.2em;">Directions</a>
 	</div>
 	</div>
@@ -470,7 +460,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Live Love Paddle</h2>
-	<p class="text">Head to Live Love Paddle for a prime experience of Austin’s Lady Bird Lake! They offer kayaks and stand-up paddleboards in all shapes and sizes for anyone who wants a refreshing float down the lake. <p>
+	<p class="text">Head to Live Love Paddle for a prime experience of Austin's Lady Bird Lake! They offer kayaks and stand-up paddleboards in all shapes and sizes for anyone who wants a refreshing float down the lake. <p>
 	<a href="https://www.google.com/maps/dir//Live+Love+Paddle,+East+Riverside+Drive,+Austin,+TX/@30.2457465,-97.7657574,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x8644b4ff04511499:0x9bacb3512239d047!2m2!1d-97.730593!2d30.2457616!3e0" target="_blank" style="font-size:1.2em;">Website</a>
 	</div>
 	</div>
@@ -483,7 +473,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Lone Star Kayak Tours</h2>
-	<p class="text">Lone Star Kayak Tours provide a new perspective through which guests can get to know Austin! Whether it’s a full moon tour with the bats on Congress Avenue Bridge or the beautiful Texas sunset reflected on the skyline, they provide a way for everyone to get to know Austin’s unique culture and views. <p>
+	<p class="text">Lone Star Kayak Tours provide a new perspective through which guests can get to know Austin! Whether it's a full moon tour with the bats on Congress Avenue Bridge or the beautiful Texas sunset reflected on the skyline, they provide a way for everyone to get to know Austin's unique culture and views. <p>
 	<a href="https://www.google.com/maps/dir//Lone+Star+Kayak+Tours,+East+Riverside+Drive,+Austin,+TX/@30.2457465,-97.7657574,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x8644b5b86592925f:0x660a238e063f8610!2m2!1d-97.7410739!2d30.2523719!3e0" target="_blank" style="font-size:1.2em;">Website</a>
 	</div>
 	</div>
@@ -499,7 +489,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Austin Bouldering</h2>
-	<p class="text">Austin is home to two locations of Austin Bouldering Project - Springdale and Westgate. These bouldering gyms offer a yoga studio, fitness studio, weight room, cafe, co-working space, and saunas. Absolutely everyone is welcome and you’re guaranteed to get a great workout. 
+	<p class="text">Austin is home to two locations of Austin Bouldering Project - Springdale and Westgate. These bouldering gyms offer a yoga studio, fitness studio, weight room, cafe, co-working space, and saunas. Absolutely everyone is welcome and you're guaranteed to get a great workout. 
 	</p>
 	<a href="https://austinboulderingproject.com/" target="_blank" style="font-size:1.2em;">Website</a>
 	</div>
@@ -513,7 +503,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Greenbelt</h2>
-	<p class="text">If you are looking for more of an outdoorsy vibe, absolutely head to the Greenbelt for some climbing. You will find climbing of all levels here, as well as numerous watering holes to take a dip in afterwards. Everyone in the Austin climbing community is really friendly, and you’ll certainly have a great adventure!		<p>
+	<p class="text">If you are looking for more of an outdoorsy vibe, absolutely head to the Greenbelt for some climbing. You will find climbing of all levels here, as well as numerous watering holes to take a dip in afterwards. Everyone in the Austin climbing community is really friendly, and you'll certainly have a great adventure!		<p>
 	<a href="https://www.mountainproject.com/area/105905087/barton-creek-greenbelt" target="_blank" style="font-size:1.2em;">Website</a>
 	</div>
 	</div>
@@ -538,7 +528,7 @@ LOGIN;
 
 	<div class="bottom-info">
 		<p id = "contact"></p>
-		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
+		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>Â© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
 	</div>	
   
 </body>
