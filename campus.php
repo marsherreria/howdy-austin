@@ -68,12 +68,13 @@
    		<link rel="ICON" href="DISCO.png">
 
 		</head> 
+		<body>
 
 		<a href="home.html">
     		<img src="HOWDY-AUSTIN.png" width="475" height="100">
     		</a>
 
-		<body>
+		
 		<div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a href="home.html">HOME</a></button>
 			
@@ -143,8 +144,9 @@
 
 
 		<p id="instructions">
-		<b><i><u>Login to access content</b></i></u>
+		<b><i><u>Login to access content</u></i></b>
 		<br>
+		Don't have an account? Click <a href = "profile.html"> here </a> to register
 		</p>
 
 
@@ -200,24 +202,13 @@ LOGIN;
    <link rel="ICON" href="DISCO.png">
 
 </head> 
-
-<a href="home.html">
-    <img src="HOWDY-AUSTIN.png" width="475" height="100">
-    </a>
-
 <body>
+
+
 <div class="top">
 	<a href="home.html">
    		<img src="HOWDY-AUSTIN.png" width="475" height="100">
    	</a>
-
-	<div id="placeholder-img">
-		<a href="profile.html">
-			<img id="placeholder-img" 
-				 alt="Profile" 
-				 src="photos/user-placeholder.png">
-	</div>
-
 
 	<div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a  href="home.html">HOME</a></button>
