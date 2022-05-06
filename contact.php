@@ -22,12 +22,13 @@ print <<<THANK_YOU
    <link rel="ICON" href="DISCO.png">
 
 </head>
+<body>
 
 <a href="home.html">
     <img src="HOWDY-AUSTIN.png" width="475" height="100">
     </a>
 
-<body>
+
         <div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a href="home.html">HOME</a></button>
 			
@@ -103,7 +104,7 @@ print <<<THANK_YOU
 
 <div class="bottom-info">
     <p id = "contact"></p>
-    <script>document.getElementById("contact").innerHTML = "CONTACT US <br>© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
+    <script>document.getElementById("contact").innerHTML = "CONTACT US <br>Â© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
 </div>
 </body>
 </html>
