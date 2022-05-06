@@ -13,18 +13,14 @@
 		if (isset ($_POST["login"])) {
 			$username = $_POST["username"];
 			$password = $_POST["password"];
-	
-			$validated = validate($username, $password);
+
 			run_form();
+			$validated = validate($username, $password);
 	
 	
 			if ($validated == TRUE) {
 				setcookie ("username", $username, time()+30, "/");
 				header("Refresh:0");
-			}
-
-			else {
-				echo "<script type='text/javascript'>alert('Username or password incorrect');</script>";
 			}	
 
 		}
@@ -34,22 +30,33 @@
 	}
 
 	function validate($username, $password) {
-		$file = fopen("password.txt", "r");
+		$server = "spring-2022.cs.utexas.edu";
+		$my_user = "cs329e_bulko_mariana";
+		$my_password = "derby6crude6divine";
+		$dbName = "cs329e_bulko_mariana";
+		$mysqli = new mysqli ($server, $my_user, $my_password, $dbName);
+
 		$verified = False;
 
-	
-		while (!feof($file)) {
-			$line = fgets($file);
-			$line_array = explode( ':', $line);
-			$user = trim($line_array[0]);
-			$pass = trim($line_array[1]);
-			
-			if ($user == $username && $pass == $password) {
+		$command = "SELECT * FROM howdyusers WHERE user = \"$username\"";
+		$result = $mysqli -> query($command);
+
+		if ($result->num_rows > 0) {
+			$command = "SELECT pass FROM howdyusers WHERE user = \"$username\"";
+			$result = $mysqli -> query($command);
+			$row = $result->fetch_row();
+			$pass2 = $row[0];
+
+			if ($password == $pass2) {
 				$verified = True;
-			}
+			} else {				
+				echo "<p align='center'> <font color='#004280'> Password is incorrect </font></p>";
+			} 
+		} else {
+				echo "<p align='center'> <font color='#004280'> Username does not exist </font></p>";
 		}
 
-		fclose ($file);
+
 		return $verified;
 
 	}
