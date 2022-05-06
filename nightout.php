@@ -68,12 +68,13 @@
    		<link rel="ICON" href="DISCO.png">
 
 		</head> 
+		<body>
 
 		<a href="home.html">
     		<img src="HOWDY-AUSTIN.png" width="475" height="100">
     		</a>
 
-		<body>
+		
 		<div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a  href="home.html">HOME</a></button>
 			
@@ -143,8 +144,9 @@
 
 
 		<p id="instructions">
-		<b><i><u>Login to access content</b></i></u>
+		<b><i><u>Login to access content</u></i></b>
 		<br>
+		Don't have an account? Click <a href = "profile.html"> here </a> to register
 		</p>
 
 
@@ -200,23 +202,11 @@ LOGIN;
    <link rel="ICON" href="DISCO.png">
 
 </head> 
-
-<a href="home.html">
-    <img src="HOWDY-AUSTIN.png" width="475" height="100">
-    </a>
-
 <body>
 <div class="top">
 	<a href="home.html">
    		<img src="HOWDY-AUSTIN.png" width="475" height="100">
    	</a>
-
-	<div id="placeholder-img">
-		<a href="profile.html">
-			<img id="placeholder-img" 
-				 alt="Profile" 
-				 src="photos/user-placeholder.png">
-	</div>
 
 
 	<div class="navbar">
@@ -296,7 +286,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Cain & Abel's</h2>
-	<p class="text">A classic college bar nestled right in the heart of West Campus that’s filled with UT students every night of the week -- don’t forget to go on Tuesdays for dollar beers. They’re notoriously strict on fake IDs  so it’s almost like a rite of passage for UT students to turn 21 and finally get to start going here for drinks with friends.<p>
+	<p class="text">A classic college bar nestled right in the heart of West Campus that's filled with UT students every night of the week -- don't forget to go on Tuesdays for dollar beers. They're notoriously strict on fake IDs  so it’s almost like a rite of passage for UT students to turn 21 and finally get to start going here for drinks with friends.<p>
 	<a href="https://abels.com/original">Website</a>
 	</div>
 	</div>
@@ -337,7 +327,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Barbarella</h2>
-	<p class="text">Barbarella is a club that’s always bumping and on Thursdays they do $2 (yes, TWO dollar) drinks. They play a range of exciting music and is always a fun place to go and dance!<p>
+	<p class="text">Barbarella is a club that's always bumping and on Thursdays they do $2 (yes, TWO dollar) drinks. They play a range of exciting music and is always a fun place to go and dance!<p>
 	<a href="https://www.instagram.com/barbarella_atx/?hl=en">Website</a>
 	</div>
 	</div>
@@ -346,7 +336,7 @@ LOGIN;
 	
  	<div class="bottom-info">
 		<p id = "contact"></p>
-		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
+		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>Â© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
 	</div> 
  
 </body>
