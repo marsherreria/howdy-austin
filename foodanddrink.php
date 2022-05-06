@@ -68,12 +68,13 @@
    		<link rel="ICON" href="DISCO.png">
 
 		</head> 
+		<body>
 
 		<a href="home.html">
     		<img src="HOWDY-AUSTIN.png" width="475" height="100">
     		</a>
 
-		<body>
+		
 		<div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a  href="home.html">HOME</a></button>
 			
@@ -143,8 +144,9 @@
 
 
 		<p id="instructions">
-		<b><i><u>Login to access content</b></i></u>
+		<b><i><u>Login to access content</u></i></b>
 		<br>
+		Don't have an account? Click <a href = "profile.html"> here </a> to register
 		</p>
 
 
@@ -200,24 +202,11 @@ LOGIN;
    <link rel="ICON" href="DISCO.png">
 
 </head> 
-
-<a href="home.html">
-    <img src="HOWDY-AUSTIN.png" width="475" height="100">
-    </a>
-
 <body>
     <div class="top">
 	<a href="home.html">
    		<img src="HOWDY-AUSTIN.png" width="475" height="100">
    	</a>
-
-	<div id="placeholder-img">
-		<a href="profile.html">
-			<img id="placeholder-img" 
-				 alt="Profile" 
-				 src="photos/user-placeholder.png">
-	</div>
-
 
 	<div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a href="home.html">HOME</a></button>
@@ -296,9 +285,9 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Chuys</h2>
-	<p class="text">When you think of delicious Tex-Mex and tasty margaritas, you think of Chuy’s! There’s multiple locations throughout 
+	<p class="text">When you think of delicious Tex-Mex and tasty margaritas, you think of Chuy's! There's multiple locations throughout 
 	Austin including the original which resides on Barton Springs Road. On top of the amazing food and drinks, the fun and 
-	colorful design of Chuy’s is quintessential Austin.<p>
+	colorful design of Chuy's is quintessential Austin.<p>
 	<a href="https://www.chuys.com/locations" target="_blank" style="font-size:1.2em;">Locations</a>
 	<a href="https://www.chuys.com/menu" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
@@ -327,8 +316,8 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Rosita's</h2>
-	<p class="text">Rosita’s Al Pastor is just a short bus or car ride away from campus on Riverside. They’re famous for their delicious 
-	tacos, but I highly recommend the quesadillas. It’s hard to go wrong with Tex-Mex in Austin, but Rosita’s holds a special place in my heart.
+	<p class="text">Rosita's Al Pastor is just a short bus or car ride away from campus on Riverside. They're famous for their delicious 
+	tacos, but I highly recommend the quesadillas. It's hard to go wrong with Tex-Mex in Austin, but Rosita's holds a special place in my heart.
 	<p>
 	<a href="https://www.allmenus.com/tx/austin/660981-rositas-al-pastor/menu/" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
@@ -342,7 +331,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Terry Blacks</h2>
-	<p class="text">The self-proclaimed home for legendary Central Texas BBQ, Terry Blacks is an absolute must for tourists and locals alike. They’ve got plenty of space, so you likely won’t wait for long - and they’ve got the absolute best sides and pit-smoked meats in the game. <p>
+	<p class="text">The self-proclaimed home for legendary Central Texas BBQ, Terry Blacks is an absolute must for tourists and locals alike. They've got plenty of space, so you likely won't wait for long - and they've got the absolute best sides and pit-smoked meats in the game. <p>
 	<a href="https://www.terryblacksbbq.com/austin/menu/" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
 	</div>
@@ -355,8 +344,8 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Hopdoddy</h2>
-	<p class="text">Forget Jendy’s, in fact forget everything you thought you knew about burgers, and try Hopdoddy’s range of 
-	creative flavor combos. With several locations in and around Austin, Hopdoddy is a great choice for happy hour or a late night Doordash. Don’t forget the truffle parmesan fries!  <p>
+	<p class="text">Forget Jendy's, in fact forget everything you thought you knew about burgers, and try Hopdoddy's range of 
+	creative flavor combos. With several locations in and around Austin, Hopdoddy is a great choice for happy hour or a late night Doordash. Don't forget the truffle parmesan fries!  <p>
 	<a href="https://www.hopdoddy.com/locations" target="_blank" style="font-size:1.2em;">Locations</a>
 	<a href="https://www.hopdoddy.com/menu" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
@@ -370,7 +359,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Homeslice</h2>
-	<p class="text">Home Slice Pizza is one of Austin’s finest: an independent neighborhood pizza joint serving authentic NY-style pizza at South Congress and the North Loop. they offer homemade, hand tossed, bona fide pies for either dine in or carry out, and are absolutely delicious!		<p>
+	<p class="text">Home Slice Pizza is one of Austin's finest: an independent neighborhood pizza joint serving authentic NY-style pizza at South Congress and the North Loop. they offer homemade, hand tossed, bona fide pies for either dine in or carry out, and are absolutely delicious!		<p>
 	<a href="https://homeslicepizza.com/" target="_blank" style="font-size:1.2em;">Locations</a>
 	<a href="https://homeslicepizza.com/" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
@@ -399,7 +388,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Bennu</h2>
-	<p class="text">Bennu’s Highland location is open 24 hours, serving refills for only a dollar as you grind 
+	<p class="text">Bennu's Highland location is open 24 hours, serving refills for only a dollar as you grind 
 	out that essay. The cozy but modern atmosphere, friendly service, and free wi-fi seal the deal.<p>
 	<a href="https://bennucoffee.com/menu.html" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
@@ -455,7 +444,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Jo's Coffee</h2>
-	<p class="text">You can find it on South Congress (with the iconic “I love you so much” graffiti on the side of it), you can find it in the Austin airport, and you can find it in a random parking lot next to H-E-B…and each location delivers just as amazing coffee and customer service as the next. A favorite home-grown Austin coffee shop for locals!<p>
+	<p class="text">You can find it on South Congress (with the iconic "I love you so much" graffiti on the side of it), you can find it in the Austin airport, and you can find it in a random parking lot next to H-E-B... and each location delivers just as amazing coffee and customer service as the next. A favorite home-grown Austin coffee shop for locals!<p>
 	<a href="https://www.joscoffee.com/" target="_blank" style="font-size:1.2em;">Locations</a>
 	<a href="https://static1.squarespace.com/static/55679273e4b0f3550bf4a8fe/t/60c38dbfcbfcab6ca717492b/1623428546843/DowntownJos.pdf" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
@@ -500,7 +489,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Coco's Cafe</h2>
-	<p class="text">Coco’s is a locally owned and operated business that specializes in bubble tea and Taiwanese cuisine. Their boba tea is absolutely delicious, and we recommend pairing some Thai Tea with Pearls with their famous Peppercorn Tofu!<p>
+	<p class="text">Coco's is a locally owned and operated business that specializes in bubble tea and Taiwanese cuisine. Their boba tea is absolutely delicious, and we recommend pairing some Thai Tea with Pearls with their famous Peppercorn Tofu!<p>
 	<a href="https://www.cocos-cafe.com/menu" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
 	</div>
@@ -513,7 +502,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Teapioca</h2>
-	<p class="text">Head on over to Teapioca to enjoy their personal spin on authentic Taiwanese cuisine! You can’t go wrong with any of their delicious selection of drinks and desserts, and there’s a vast array of flavors to cater to everyone. <p>
+	<p class="text">Head on over to Teapioca to enjoy their personal spin on authentic Taiwanese cuisine! You can't go wrong with any of their delicious selection of drinks and desserts, and there's a vast array of flavors to cater to everyone. <p>
 	<a href="https://https://www.teapiocalounge.com/store-locator/" target="_blank" style="font-size:1.2em;">Locations</a>
 	<a href="https://www.teapiocalounge.com/menu/" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
@@ -553,7 +542,7 @@ LOGIN;
 
 	<div class="bottom-info">
 		<p id = "contact"></p>
-		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
+		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>Â© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
 	</div>	
   
 </body>
