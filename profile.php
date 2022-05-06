@@ -22,12 +22,13 @@ print <<<REGISTRATION_RESULT
    <link rel="ICON" href="DISCO.png">
 
 </head>
-
-<a href="home.html">
+<body>
+<div class="top">
+	<a href="home.html">
     <img src="HOWDY-AUSTIN.png" width="475" height="100">
     </a>
 
-<body>
+
         <div class="navbar">
                         <button style="margin-left: 29px; float: left" class="dropbtn"><a  id = "selectednav" href="home.html">HOME</a></button>
 
@@ -92,6 +93,7 @@ print <<<REGISTRATION_RESULT
 
 
                 </div>
+	</div>
 
 
 <br>
