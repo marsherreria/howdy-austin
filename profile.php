@@ -4,9 +4,9 @@ $username = $_GET["username"];
 $password = $_GET["password"];
 $repeat = $_GET["repeat"];
 
-register();
+register($username, $password, $repeat);
 
-function validateUser() {
+function validateUser($username) {
 	if (strlen($username < 6) || (strlen($username > 20)) {
 		return False;
 	} else {
@@ -14,7 +14,7 @@ function validateUser() {
 	}
 }
 
-function validatePass() {
+function validatePass($password) {
 	if (strlen($password < 6) || (strlen($password > 20)) {
 		return False;
 	} else {
@@ -22,7 +22,7 @@ function validatePass() {
 	}
 }
 
-function validateRepeat() {
+function validateRepeat($repeat) {
 	if ($password == $repeat) {
 		return True;
 	} else {
@@ -30,17 +30,21 @@ function validateRepeat() {
 	}
 }
 
-function validateForm() {
-	if (validateUser() == TRUE && validatePass() == TRUE && validateRepeat() == TRUE) {
+function validateForm($username, $password, $repeat) {
+	$user = validateUser($username);
+	$pass = validatePass($password);
+	$reap = validateRepeat($repeat);
+
+	if ($user == TRUE && $pass == TRUE && $reap == TRUE) {
 		$validated = True;
 		return validated;
-	} elseif (validateUser() == FALSE) {
+	} elseif ($user == FALSE) {
 		$validated = "user"
 		return $validated;
-	} elseif (validatePass() == FALSE) {
+	} elseif ($pass == FALSE) {
 		$validated = "pass"
 		return $validated;
-	} elseif (validateRepeat() == FALSE) {
+	} elseif ($reap == FALSE) {
 		$validated = "repeat"
 		return $validated;
 	}
@@ -48,11 +52,11 @@ function validateForm() {
 }
 
 
-function register() {
-	$validated = validateForm() 
+function register($username, $password, $repeat) {
+	$validated = validateForm($username, $password, $repeat) 
 	
 	if ($validated == TRUE) {		
-		run_sql();
+		run_sql($username, $password);
 	} else if ($validated == "user") {
 		echo "<p align='center'> <font color='#004280'> Username does not meet requirements </font></p>";
 	} else if ($validated == "pass") {
@@ -63,7 +67,7 @@ function register() {
 }
 
 
-function run_sql() {
+function run_sql($username, $password) {
 
 	$server = "spring-2022.cs.utexas.edu";
 	$my_user = "cs329e_bulko_mariana";
