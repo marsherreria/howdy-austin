@@ -3,7 +3,7 @@
 
 
 body {
-	background-color: #d6e7ef;
+	background-color: #D8FFFF;
 }
 
 h1 {
@@ -69,7 +69,7 @@ button {
 .top {
 	position: fixed;
 	top: 0;
-	background-color: #d6e7ef;
+	background-color: #D8FFFF;
 	width: 100%;
 }
 
