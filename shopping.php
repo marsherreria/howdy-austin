@@ -141,10 +141,10 @@
 
 	</div>
 
-
 		<p id="instructions">
-		<b><i><u>Login to access content</b></i></u>
+		<b><i><u>Login to access content</u></i></b>
 		<br>
+		Don't have an account? Click <a href = "profile.html"> here </a> to register
 		</p>
 
 
@@ -210,14 +210,6 @@ LOGIN;
 	<a href="home.html">
    		<img src="HOWDY-AUSTIN.png" width="475" height="100">
    	</a>
-
-	<div id="placeholder-img">
-		<a href="profile.html">
-			<img id="placeholder-img" 
-				 alt="Profile" 
-				 src="photos/user-placeholder.png">
-	</div>
-
 
 	<div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a href="home.html">HOME</a></button>
@@ -308,7 +300,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Uptown Cheapskate</h2>
-	<p class="text">Uptown Cheapskate is nothing if not stylish. They pay cash for gently used merchandise, handbags, and accessories and resell them for up to 70% off retail value! With hundreds of new items for sale each day, there’s always something to grab from your favorite designer for a cheap price all under one roof. </p>
+	<p class="text">Uptown Cheapskate is nothing if not stylish. They pay cash for gently used merchandise, handbags, and accessories and resell them for up to 70% off retail value! With hundreds of new items for sale each day, there's always something to grab from your favorite designer for a cheap price all under one roof. </p>
 	</div>
 	</div>
 
@@ -333,7 +325,7 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Buffalo Exchange</h2>
-	<p class="text">If you’re looking for an eclectic new addition to your wardrobe, Buffalo Exchange is the place for you! Their proximity to the University of Texas means they curate to a college-age clientele, so this is a great spot to curate a youthful style. They accept recycled closet cleanouts as a way to help the environment while providing you with a bit of cash to trade in for a new wardrobe!</p>
+	<p class="text">If you're looking for an eclectic new addition to your wardrobe, Buffalo Exchange is the place for you! Their proximity to the University of Texas means they curate to a college-age clientele, so this is a great spot to curate a youthful style. They accept recycled closet cleanouts as a way to help the environment while providing you with a bit of cash to trade in for a new wardrobe!</p>
 	</div>
 	</div>
 
@@ -342,7 +334,7 @@ LOGIN;
   
 	<div class="bottom-info">
 		<p id = "contact"></p>
-		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
+		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>Â© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
 	</div>
 </body>
 </html>
