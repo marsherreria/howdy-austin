@@ -9,7 +9,7 @@
    <meta name="author" content="Hana Bredstein, Mariana Herreria, Kaitlyn Ream, Hayley Slotboom">
    <link href="home.css" rel="stylesheet">
    <link rel="ICON" href="DISCO.png">
-
+   <script src="profile.js" defer> </script>
 
 </head> 
 
@@ -71,7 +71,7 @@
 				<button style="margin-left: 29px;" class="dropbtn"><a href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -118,7 +118,7 @@ Already have an account? Click <a href = "login.php"> here </a> to login
       </tr>
 
       <tr>
-         <td style="text-align:right;"><input id="register" type="submit" value="Register"/></td>
+         <td style="text-align:right;"><input id="register" type="button" value="Register"/></td>
          <td><input id="clear" type="reset" value="Clear"/></td>
       </tr>
 
@@ -145,12 +145,11 @@ Already have an account? Click <a href = "login.php"> here </a> to login
 
 		var username = document.getElementById('username').value;
                	var password = document.getElementById('password').value;
-               	var repeat = document.getElementById('repeat').value;
 
 
                 var queryString = "?username=" + username;
             
-               	queryString +=  "&password=" + password + "&repeat=" + repeat;
+               	queryString +=  "&password=" + password;
                
                	ajaxRequest.open("GET", "profile.php" + queryString, true);
                	ajaxRequest.send(null);
