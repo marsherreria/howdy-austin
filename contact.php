@@ -1,16 +1,26 @@
 <?php
-# get the incoming information
-$name  = $_POST["name"];
-$email  = $_POST["email"];
-$comment = $_POST["comments"];
-if(isset($_POST['connection'])){
-$connection = $_POST["connection"];
+sql();
+
+function sql() {
+	$server = "spring-2022.cs.utexas.edu";
+	$my_user = "cs329e_bulko_mariana";
+	$my_password = "derby6crude6divine";
+	$dbName = "cs329e_bulko_mariana";
+
+	$mysqli = new mysqli ($server, $my_user, $my_password, $dbName);
+
+	$name  = $mysqli -> real_escape_string($_POST["name"]);
+	$email  = $mysqli -> real_escape_string($_POST["email"]);
+	$comment = $mysqli -> real_escape_string($_POST["comments"]);
+	$connection = $mysqli -> real_escape_string($_POST["connection"]);
+		
+	$command = "INSERT INTO form VALUES ('$name, '$email', '$comment', '$connection')";
+	$mysqli -> query($command);
 }
-if ($fh = fopen ("comments.txt", "a"))
-{
-fwrite ($fh, "$name\n$email\n$connection\n$comment");
-fclose ($fh);
-}
+
+run_page();
+
+function run_page() {
 print <<<THANK_YOU
 <html>
   <head>
@@ -82,7 +92,7 @@ print <<<THANK_YOU
 				<button style="margin-left: 29px;" class="dropbtn"><a href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -97,8 +107,6 @@ print <<<THANK_YOU
 	</div>
 
 
-<br>
-<br>
 
 <p id = "instructions"><b><i><u>Thank you for your feedback!<u><i><b></p>
 
@@ -109,5 +117,6 @@ print <<<THANK_YOU
 </body>
 </html>
 THANK_YOU;
+}
 ?>
 
