@@ -13,18 +13,14 @@
 		if (isset ($_POST["login"])) {
 			$username = $_POST["username"];
 			$password = $_POST["password"];
-	
-			$validated = validate($username, $password);
+
 			run_form();
+			$validated = validate($username, $password);
 	
 	
 			if ($validated == TRUE) {
-				setcookie ("username", $username, time()+30, "/");
+				setcookie ("username", $username, time()+3600*24*3, "/");
 				header("Refresh:0");
-			}
-
-			else {
-				echo "<script type='text/javascript'>alert('Username or password incorrect');</script>";
 			}	
 
 		}
@@ -34,22 +30,33 @@
 	}
 
 	function validate($username, $password) {
-		$file = fopen("password.txt", "r");
+		$server = "spring-2022.cs.utexas.edu";
+		$my_user = "cs329e_bulko_mariana";
+		$my_password = "derby6crude6divine";
+		$dbName = "cs329e_bulko_mariana";
+		$mysqli = new mysqli ($server, $my_user, $my_password, $dbName);
+
 		$verified = False;
 
-	
-		while (!feof($file)) {
-			$line = fgets($file);
-			$line_array = explode( ':', $line);
-			$user = trim($line_array[0]);
-			$pass = trim($line_array[1]);
-			
-			if ($user == $username && $pass == $password) {
+		$command = "SELECT * FROM howdyusers WHERE user = \"$username\"";
+		$result = $mysqli -> query($command);
+
+		if ($result->num_rows > 0) {
+			$command = "SELECT pass FROM howdyusers WHERE user = \"$username\"";
+			$result = $mysqli -> query($command);
+			$row = $result->fetch_row();
+			$pass2 = $row[0];
+
+			if ($password == $pass2) {
 				$verified = True;
-			}
+			} else {				
+				echo "<p align='center'> <font color='#004280'> Password is incorrect </font></p>";
+			} 
+		} else {
+				echo "<p align='center'> <font color='#004280'> Username does not exist </font></p>";
 		}
 
-		fclose ($file);
+
 		return $verified;
 
 	}
@@ -68,12 +75,13 @@
    		<link rel="ICON" href="DISCO.png">
 
 		</head> 
+		<body>
 
 		<a href="home.html">
     		<img src="HOWDY-AUSTIN.png" width="475" height="100">
     		</a>
 
-		<body>
+		
 		<div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a  href="home.html">HOME</a></button>
 			
@@ -127,7 +135,7 @@
 				<button style="margin-left: 29px;" class="dropbtn"><a  id = "selectednav" href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -143,8 +151,9 @@
 
 
 		<p id="instructions">
-		<b><i><u>Login to access content</b></i></u>
+		<b><i><u>Login to access content</u></i></b>
 		<br>
+		Don't have an account? Click <a href = "profile.html"> here </a> to register
 		</p>
 
 
@@ -199,22 +208,11 @@ LOGIN;
 
 </head> 
 
-<a href="home.html">
-    <img src="HOWDY-AUSTIN.png" width="475" height="100">
-    </a>
-
 <body>
     <div class="top">
 	<a href="home.html">
    		<img src="HOWDY-AUSTIN.png" width="475" height="100">
    	</a>
-
-	<div id="placeholder-img">
-		<a href="profile.html">
-			<img id="placeholder-img" 
-				 alt="Profile" 
-				 src="photos/user-placeholder.png">
-	</div>
 
 
 	<div class="navbar">
@@ -270,7 +268,7 @@ LOGIN;
 				<button style="margin-left: 29px;" class="dropbtn"><a id = "selectednav" href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -284,9 +282,9 @@ LOGIN;
 
 	</div>
 
-	<br>
+	<br><br><br><br><br><br>
 
-	<h1 class="subtitle">Music</h1>
+	<h1 class="subtitle">Events</h1>
 
 	<div>
 	<img class="pics" src="photos/acl.jpg" alt="ACL">
@@ -301,7 +299,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/sxsw.jpg" alt="SXSW">
@@ -316,7 +314,64 @@ LOGIN;
 	</div>
 	</div>
 
-	<br id="sports"><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div>
+	<img class="pics" src="photos/eeyores.png" alt="Eeyores">
+
+	<div class="blurb">
+	<br>
+	<h2 class="name">Eeyore's Birthday</h2>
+	<p class="text">Held every Spring for the past 57 years, Eeyore's Birthday is a free event for people of all ages. It's also the biggest hippie event in Austin! There are drum circles, jugglers, performers, vendors, and of course a lot of... well you know what hippies do. The event is also a great opportunity to give back to the Austin community, as all proceds help non-profits in Texas. 
+	</p>
+	<a href="https://eeyores.org/" target="_blank" style="font-size:1.2em;">Website</a>
+	</div>
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div>
+	<img class="pics" src="photos/drumcircle.jpg" alt="Drum Circle">
+
+	<div class="blurb">
+	<br>
+	<h2 class="name">Barton Springs Drum Circle</h2>
+	<p class="text">Every Sunday for the past 15 years, people from all across Austin have gathered under the Monkey Tree, right next to Barton Springs, to drum the evening away. Bring a picnic blanket and come vibe out with some of Austin's most eccentric people!
+	</p>
+	<a href="https://www.google.com/maps/dir//The+Monkey+Tree,+Austin,+TX/@30.2628029,-97.8043374,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8644b56b0d04a641:0x62c608e81e56b41a!2m2!1d-97.769232!2d30.2627334" target="_blank" style="font-size:1.2em;">Directions</a>
+	</div>
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div>
+	<img class="pics" src="photos/grandprix.jpg" alt="Grand Prix">
+
+	<div class="blurb">
+	<br>
+	<h2 class="name">Grand Prix</h2>
+	<p class="text">Held in October, the Grand Prix attracts crowds that are completely different from those drawn by the Austin Film Festival and South by Southwest. Since the races are held all over the world, you almost have to be wealthy to be a devoted fan. And many of the F1 fans do travel to every race, whether it's in Mexico City or Monaco. Instead of driving to the track in southeast Austin, many of them commute by helicopter from downtown Austin. 
+	</p>
+	</div>
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br>
+
+	<div>
+	<img class="pics" src="photos/trailoflights.jpg" alt="Trail of Lights">
+
+	<div class="blurb">
+	<br>
+	<h2 class="name">Trail of Lights</h2>
+	<p class="text">Every December for over 50 years, Zilker Park transforms into a Christmas Wonderland, with over 2 million lights, 90 holiday trees, and 70 holiday displays and lighted tunnels.
+	</p>
+	<a href="https://austintrailoflights.org/" target="_blank" style="font-size:1.2em;">Website</a>
+	</div>
+	</div>
+
+
+	<br id="sports"><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 
 	<h1 class="subtitle">Sports</h1>
 
@@ -326,11 +381,11 @@ LOGIN;
 	<div class="blurb">
 	<br>
 	<h2 class="name">Round Rock Express</h2>
-	<p class="text">Round Rock’s own minor league team plays regularly at Dell Diamond in Old Settlers’ Park. Many players have gone to play for the Rangers, Astros, and other MLB teams. <p>
+	<p class="text">Round Rock's own minor league team plays regularly at Dell Diamond in Old Settlers' Park. Many players have gone to play for the Rangers, Astros, and other MLB teams. <p>
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/utsports.jpg" alt="UT Sports">
@@ -342,7 +397,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 	<div>
@@ -355,11 +410,27 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div>
+	<img class="pics" src="photos/nitrocircus.jpg" alt="Nitro Circus">
+
+	<div class="blurb">
+	<br>
+	<h2 class="name">Nitro Circus</h2>
+	<p class="text">For nearly two decades, Nitro Circus has stunned crowds around the globe with some of the world's craziest stunts, biggest fails, and comedic moments. The hellraising performers have been coming to Dell Diamond for the past few years, so if you want to see some action, don't miss out on their show this July.
+	<p>
+	<a href="ttps://www.milb.com/round-rock/fans/nitro-circus" target="_blank" style="font-size:1.2em;">Tickets</a>
+	</div>
+	</div>
+
+
+	<br><br><br><br><br><br><br><br>
 	    
 	<div class="bottom-info">
 		<p id = "contact"></p>
-		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
+		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>Â© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
 	</div>
   
 </body>
