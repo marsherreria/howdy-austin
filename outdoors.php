@@ -13,18 +13,14 @@
 		if (isset ($_POST["login"])) {
 			$username = $_POST["username"];
 			$password = $_POST["password"];
-	
-			$validated = validate($username, $password);
+
 			run_form();
+			$validated = validate($username, $password);
 	
 	
 			if ($validated == TRUE) {
-				setcookie ("username", $username, time()+30, "/");
+				setcookie ("username", $username, time()+3600*24*3, "/");
 				header("Refresh:0");
-			}
-
-			else {
-				echo "<script type='text/javascript'>alert('Username or password incorrect');</script>";
 			}	
 
 		}
@@ -34,22 +30,33 @@
 	}
 
 	function validate($username, $password) {
-		$file = fopen("password.txt", "r");
+		$server = "spring-2022.cs.utexas.edu";
+		$my_user = "cs329e_bulko_mariana";
+		$my_password = "derby6crude6divine";
+		$dbName = "cs329e_bulko_mariana";
+		$mysqli = new mysqli ($server, $my_user, $my_password, $dbName);
+
 		$verified = False;
 
-	
-		while (!feof($file)) {
-			$line = fgets($file);
-			$line_array = explode( ':', $line);
-			$user = trim($line_array[0]);
-			$pass = trim($line_array[1]);
-			
-			if ($user == $username && $pass == $password) {
+		$command = "SELECT * FROM howdyusers WHERE user = \"$username\"";
+		$result = $mysqli -> query($command);
+
+		if ($result->num_rows > 0) {
+			$command = "SELECT pass FROM howdyusers WHERE user = \"$username\"";
+			$result = $mysqli -> query($command);
+			$row = $result->fetch_row();
+			$pass2 = $row[0];
+
+			if ($password == $pass2) {
 				$verified = True;
-			}
+			} else {				
+				echo "<p align='center'> <font color='#004280'> Password is incorrect </font></p>";
+			} 
+		} else {
+				echo "<p align='center'> <font color='#004280'> Username does not exist </font></p>";
 		}
 
-		fclose ($file);
+
 		return $verified;
 
 	}
@@ -128,7 +135,7 @@
 				<button style="margin-left: 29px;" class="dropbtn"><a  href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -262,7 +269,7 @@ LOGIN;
 				<button style="margin-left: 29px;" class="dropbtn"><a href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -276,7 +283,7 @@ LOGIN;
 
 	</div>
 
-	<br>
+	<br><br><br><br><br><br>
 
 	<h1 class="subtitle">Hiking</h1>
 
@@ -291,7 +298,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/mckinneyfalls.jpg" alt="McKinney Falls">
@@ -304,7 +311,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/flats.jpg" alt="The Flats (Greenbelt)">
@@ -317,7 +324,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/sculpturefalls.jpg" alt="Sculpture Falls">
@@ -330,7 +337,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/bastrop.jpg" alt="Bastrop State Park">
@@ -343,7 +350,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/lakegeorgetown.jpg" alt="Lake Georgetown">
@@ -356,7 +363,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br id="swimming"><br><br><br><br><br><br><br><br><br><br>
+	<br id="swimming"><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<h1 class="subtitle">Swimming</h1>
 
@@ -371,7 +378,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/bluehole.jpg" alt="Blue Hole">
@@ -384,7 +391,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/jacobswell.jpg" alt="Jacob's Well">
@@ -397,7 +404,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/hippiehollow.jpg" alt="Hippie Hollow">
@@ -410,7 +417,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/krausesprings.jpg" alt="Krause Springs">
@@ -423,7 +430,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/hamiltonpool.jpg" alt="Hamilton Pool">
@@ -437,7 +444,7 @@ LOGIN;
 	</div>
 
 
-	<br id="kayaking"><br><br><br><br><br><br><br><br>
+	<br id="kayaking"><br><br><br><br><br><br><br><br><br><br><br>
 
 	<h1 class="subtitle">Kayaking</h1>
 
@@ -452,7 +459,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/livelovepaddle.jpg" alt="Live Love Paddle">
@@ -465,7 +472,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/lonestarkayak.jpg" alt="Lone Star Kayak Tours">
@@ -479,7 +486,7 @@ LOGIN;
 	</div>
 
 
-	<br id="rockclimbing"><br><br><br><br><br><br><br><br><br><br>
+	<br id="rockclimbing"><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<h1 class="subtitle">Rock Climbing</h1>
 
@@ -495,7 +502,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/greenbelt.jpg" alt="Greenbelt">
@@ -508,7 +515,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 	<div>
@@ -523,7 +530,7 @@ LOGIN;
 	</div>
 
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	
 
 	<div class="bottom-info">
