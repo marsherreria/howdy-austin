@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>sc
 
 <html lang="en">
 
@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="contact.css">
    <link rel="SHORTCUT ICON" href="DISCO.png">
    <link rel="ICON" href="DISCO.png">
-
+   <script src="contact.js" defer></script>
 </head> 
 <body>
 
@@ -72,7 +72,7 @@
 				<button style="margin-left: 29px;" class="dropbtn"><a href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -91,7 +91,7 @@
 
 <h1>CONTACT US</h1>
 
-<form action = "./contact.php" method = "post">
+<form action = "contact.php" method = "post">
 
    <table id="contact-form" frame="box">
 
@@ -121,11 +121,11 @@
       </tr>
 
       <tr>
-         <td><input name = "connection" type = "radio" value = "old" /> I've been around a while!</td>
+         <td><input id = "connection" name = "connection" type = "radio" value = "old" /> I've been around a while!</td>
       </tr>
 
       <tr>
-         <td><input name = "connection" type = "radio" value = "new" /> I'm a new friend here! </td>
+         <td><input id = "connection" name = "connection" type = "radio" value = "new" /> I'm a new friend here! </td>
       </tr>
 
 
@@ -146,17 +146,17 @@
       </tr>
 
       <tr>
-         <td> <input id = "submit" type="button" value="Submit"/> <input type="reset" value="Reset"/> </td>
+         <td style="text-align:center"> <input id = "submit" type="button" value="Submit"/> <input type="reset" value="Reset"/> </td>
       </tr>
 
    </table>
 
 </form>
-<script src="contact.js"></script>
+
 
       <div class="bottom-info">
 		<p id = "contact"></p>
-		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
+		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>Â© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
 	
 	</div>
 </body>
