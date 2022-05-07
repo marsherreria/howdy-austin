@@ -13,18 +13,14 @@
 		if (isset ($_POST["login"])) {
 			$username = $_POST["username"];
 			$password = $_POST["password"];
-	
-			$validated = validate($username, $password);
+
 			run_form();
+			$validated = validate($username, $password);
 	
 	
 			if ($validated == TRUE) {
 				setcookie ("username", $username, time()+30, "/");
 				header("Refresh:0");
-			}
-
-			else {
-				echo "<script type='text/javascript'>alert('Username or password incorrect');</script>";
 			}	
 
 		}
@@ -34,22 +30,33 @@
 	}
 
 	function validate($username, $password) {
-		$file = fopen("password.txt", "r");
+		$server = "spring-2022.cs.utexas.edu";
+		$my_user = "cs329e_bulko_mariana";
+		$my_password = "derby6crude6divine";
+		$dbName = "cs329e_bulko_mariana";
+		$mysqli = new mysqli ($server, $my_user, $my_password, $dbName);
+
 		$verified = False;
 
-	
-		while (!feof($file)) {
-			$line = fgets($file);
-			$line_array = explode( ':', $line);
-			$user = trim($line_array[0]);
-			$pass = trim($line_array[1]);
-			
-			if ($user == $username && $pass == $password) {
+		$command = "SELECT * FROM howdyusers WHERE user = \"$username\"";
+		$result = $mysqli -> query($command);
+
+		if ($result->num_rows > 0) {
+			$command = "SELECT pass FROM howdyusers WHERE user = \"$username\"";
+			$result = $mysqli -> query($command);
+			$row = $result->fetch_row();
+			$pass2 = $row[0];
+
+			if ($password == $pass2) {
 				$verified = True;
-			}
+			} else {				
+				echo "<p align='center'> <font color='#004280'> Password is incorrect </font></p>";
+			} 
+		} else {
+				echo "<p align='center'> <font color='#004280'> Username does not exist </font></p>";
 		}
 
-		fclose ($file);
+
 		return $verified;
 
 	}
@@ -127,7 +134,7 @@
 				<button style="margin-left: 29px;" class="dropbtn"><a  href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -201,10 +208,6 @@ LOGIN;
 
 </head> 
 
-<a href="home.html">
-    <img src="HOWDY-AUSTIN.png" width="475" height="100">
-    </a>
-
 <body>
 <div class="top">
 	<a href="home.html">
@@ -264,7 +267,7 @@ LOGIN;
 				<button style="margin-left: 29px;" class="dropbtn"><a href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -278,7 +281,7 @@ LOGIN;
 
 	</div>
 
-<br>
+	<br><br><br><br><br><br>
 
 	<h1 class="subtitle">Thrift Stores</h1>
 
@@ -292,7 +295,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/uptowncheapskate.jpg" alt="Uptown Cheapskate">
@@ -304,7 +307,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/flamingovintage.jpg" alt="Flamingo Vintage">
@@ -316,7 +319,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 	<div>
@@ -329,9 +332,51 @@ LOGIN;
 	</div>
 	</div>
 
+	<br><br><br><br><br><br><br><br><br><br><br><br>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
-  
+
+	<div>
+	<img class="pics" src="photos/stardust.jpg" alt="Stardust Vintage">
+
+	<div class="blurb">
+	<br>
+	<h2 class="name">Stardust Vintage</h2>
+	<p class="text">This quaint little shop has the best, premium vintage finds. If you're on the hunt for some clothing of any decade since the 50s, this is the place. The workers are very welcoming, and the vibes are very nostalgic.
+	</p>
+	</div>
+	</div>
+
+
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div>
+	<img class="pics" src="photos/uncommon.jpg" alt="Uncommon Objects">
+
+	<div class="blurb">
+	<br>
+	<h2 class="name">Uncommon Objects</h2>
+	<p class="text">This huge antique store is home to some of the craziest (and oldest) things you'll find at a store. It's fun to just go there and wander around the many nooks of the store just to see what you can find. From old photos of babies, to dressed up taxidermy, to haunted dolls, Uncommon Objects is sure to not disappoint.
+	</p>
+	</div>
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div>
+	<img class="pics" src="photos/bluevelvet.jpg" alt="Blue Velvet">
+
+	<div class="blurb">
+	<br>
+	<h2 class="name">Blue Velvet</h2>
+	<p class="text">Right next to Epoch Coffee, you'll find a cute little thrift shop with a bright blue sign. Blue Velvet is family-owned indie business that has been clothing Austin with amazing and affordable vintage clothing since 1994! Shop around, stop by the record store next door, and then grab a coffee at Epoch for the perfect afternoon date.
+	</p>
+	</div>
+	</div>
+
+
+  	<br><br><br><br><br><br><br><br><br><br><br>
+
 	<div class="bottom-info">
 		<p id = "contact"></p>
 		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>Â© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
