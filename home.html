@@ -19,13 +19,6 @@
 	<div class="top">
 	<img src="HOWDY-AUSTIN.png" width="475" height="100">
 
-	<div id="placeholder-img">
-		<a href="profile.html">
-			<img id="placeholder-img" 
-				 alt="Profile" 
-				 src="photos/user-placeholder.png">
-	</div>
-
 
 <div class="navbar">
 			<button style="margin-left: 29px; float: left" class="dropbtn"><a  id = "selectednav" href="home.html">HOME</a></button>
@@ -80,7 +73,7 @@
 				<button style="margin-left: 29px;" class="dropbtn"><a href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -88,8 +81,6 @@
 			<button style="margin-left: 29px;" class="dropbtn""><a id="pink" href="contact.html">CONTACT US</a></button>
 
 			<button style="margin-left: 29px;" class="dropbtn"><a href= "aboutus.html">ABOUT US</a></button>
-
-
 		</div>
 
 	</div>
@@ -114,13 +105,15 @@
 	</div>
 
 	<div class="audio">
-		<audio controls>
-			<source src="chiquitita.mp3" type="audio/mpeg">
+		<iframe src="chiquitita.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+		<audio id="player" autoplay loop>
+    			<source src="chiquitita.mp3" type="audio/mp3">
+		</audio>
 	</div>
 
 	<div class="bottom-info">
 		<p id = "contact"></p>
-		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
+		<script>document.getElementById("contact").innerHTML = "CONTACT US <br>Â© HAYLEY SLOTBOOM, MARIANA HERRERIA, KAITLYN REAM, HANA BREDSTEIN " + (new Date().getMonth() + 1) +'/'+(new Date().getDate())+'/'+new Date().getFullYear()</script>
 	</div>  
 	<script src="slideshow.js"></script>
 
