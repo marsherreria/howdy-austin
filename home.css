@@ -3,7 +3,6 @@
 
 body {
 	background-color: #D8FFFF;
-	/* previous color: d6e7ef */
 }
 
 
@@ -28,6 +27,7 @@ button {
   	margin-right: auto;
 }
 
+
 #instructions {
 	padding-left: 300px;
 	padding-right: 300px;
@@ -45,7 +45,8 @@ button {
 	overflow: hidden;
 	margin-left: auto;
   	margin-right: auto;
-
+	text-align: justify;
+	font-size: .9em;
     	border-top-left-radius:30px;
     	border-bottom-left-radius:30px;  
     	border-top-right-radius:30px;
