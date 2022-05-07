@@ -13,18 +13,14 @@
 		if (isset ($_POST["login"])) {
 			$username = $_POST["username"];
 			$password = $_POST["password"];
-	
-			$validated = validate($username, $password);
+
 			run_form();
+			$validated = validate($username, $password);
 	
 	
 			if ($validated == TRUE) {
-				setcookie ("username", $username, time()+30, "/");
+				setcookie ("username", $username, time()+3600*24*3, "/");
 				header("Refresh:0");
-			}
-
-			else {
-				echo "<script type='text/javascript'>alert('Username or password incorrect');</script>";
 			}	
 
 		}
@@ -34,22 +30,33 @@
 	}
 
 	function validate($username, $password) {
-		$file = fopen("password.txt", "r");
+		$server = "spring-2022.cs.utexas.edu";
+		$my_user = "cs329e_bulko_mariana";
+		$my_password = "derby6crude6divine";
+		$dbName = "cs329e_bulko_mariana";
+		$mysqli = new mysqli ($server, $my_user, $my_password, $dbName);
+
 		$verified = False;
 
-	
-		while (!feof($file)) {
-			$line = fgets($file);
-			$line_array = explode( ':', $line);
-			$user = trim($line_array[0]);
-			$pass = trim($line_array[1]);
-			
-			if ($user == $username && $pass == $password) {
+		$command = "SELECT * FROM howdyusers WHERE user = \"$username\"";
+		$result = $mysqli -> query($command);
+
+		if ($result->num_rows > 0) {
+			$command = "SELECT pass FROM howdyusers WHERE user = \"$username\"";
+			$result = $mysqli -> query($command);
+			$row = $result->fetch_row();
+			$pass2 = $row[0];
+
+			if ($password == $pass2) {
 				$verified = True;
-			}
+			} else {				
+				echo "<p align='center'> <font color='#004280'> Password is incorrect </font></p>";
+			} 
+		} else {
+				echo "<p align='center'> <font color='#004280'> Username does not exist </font></p>";
 		}
 
-		fclose ($file);
+
 		return $verified;
 
 	}
@@ -128,7 +135,7 @@
 				<button style="margin-left: 29px;" class="dropbtn"><a href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -261,7 +268,7 @@ LOGIN;
 				<button style="margin-left: 29px;" class="dropbtn"><a href= "events.php">EVENTS</a></button>
 			
 				<div class="dropdown-content">
-					<a href="events.php">Music</a>
+					<a href="events.php">Events</a>
      			 		<a href="events.php#sports">Sports</a>
 				</div>
 			</div>
@@ -275,7 +282,7 @@ LOGIN;
 
 	</div>
 
-	<br>
+	<br><br><br><br><br><br>
 
 	<h1 class="subtitle">Restaurants</h1>
 
@@ -307,7 +314,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 	<div>
@@ -323,7 +330,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/terryblacks.jpg" alt="Terry Blacks">
@@ -336,7 +343,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/hopdoddy.jpg" alt="Hopdoddy">
@@ -351,7 +358,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/homeslice.jpg" alt="Homeslice">
@@ -365,7 +372,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/vicandals.jpeg" alt="Vic and Als">
@@ -394,7 +401,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/medici.jpg" alt="Medici">
@@ -407,7 +414,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/thunderbird.jpg" alt="Thunderbird">
@@ -421,7 +428,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/cherrywood.jpg" alt="Cherrywood Coffeehouse">
@@ -436,7 +443,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/jos.jpg" alt="Jo's">
@@ -450,7 +457,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/alfred.jpg" alt="Alfred Coffee">
@@ -463,6 +470,21 @@ LOGIN;
 	<a href="https://alfred.la/pages/food" target="_blank" style="font-size:1.2em;">Menu</a>
 	</div>
 	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div>
+	<img class="pics" src="photos/epoch.jpg" alt="Epoch Coffee">
+
+	<div class="blurb">
+	<br>
+	<h2 class="name">Epoch</h2>
+	<p class="text">With multiple locations around Austin, and a very late closing time, Epoch is one of the best places to study or get some work done. The vibes are immaculate, and the coffee is even better. Try their Iced Mojo for a delicious, sweet pick-me-up.
+	</p>
+	<a href="https://epochcoffee.com/" target="_blank" style="font-size:1.2em;">Locations</a>
+	</div>
+	</div>
+
 
 
 	<br id="bobatea"><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -481,7 +503,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/cocos.jpg" alt="Coco's Cafe">
@@ -494,7 +516,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/teapioca.jpg" alt="Teapioca">
@@ -508,7 +530,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/bubbleegg.jpg" alt="Bubble Egg">
@@ -522,7 +544,7 @@ LOGIN;
 	</div>
 	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div>
 	<img class="pics" src="photos/fengcha.jpg" alt="Feng Cha">
@@ -537,7 +559,7 @@ LOGIN;
 	</div>
 
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
 	
 
 	<div class="bottom-info">
