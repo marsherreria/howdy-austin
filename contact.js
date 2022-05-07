@@ -1,5 +1,3 @@
-// javascript file for contact.html
-
 submit = document.getElementById("submit");
 submit.addEventListener("click", registerAlert);
 
